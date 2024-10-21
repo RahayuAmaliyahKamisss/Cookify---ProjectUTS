@@ -18,4 +18,9 @@ buildscript {
     }
 }
 
+// Penambahan vector icons
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialIcons.ttf', 'FontAwesome.ttf' ] // Masukkan nama font ikon yang kamu pakai
+]
+
 apply plugin: "com.facebook.react.rootproject"
