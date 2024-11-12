@@ -1,0 +1,42 @@
+{
+    "users": [
+      {
+        "id": "1",
+        "username": "user123",
+        "password": "password123",
+        "name": "Rahayu Amaliyah Kamis",
+        "profile": {
+          "email": "rahayu@example.com",
+          "bio": "Pemburu Resep Makanan Bergizi dan Enak Pastinya.",
+          "photo": "https://i.pinimg.com/736x/36/44/d6/3644d657d7e4c26aeb78d4b1f391ae78.jpg"
+        },
+        "liked": [
+          {
+            "id": "101",
+            "title": "Nasi Goreng Spesial",
+            "image": "https://i.pinimg.com/236x/53/5b/ce/535bce259c89d3420cec69c247e346b0.jpg"
+          },
+          {
+            "id": "102",
+            "title": "Gulai Ayam",
+            "image": "https://i.pinimg.com/564x/c3/9f/29/c39f291a047efe14d2d8d5c7476c30f3.jpg"
+          }
+        ],
+        "news": [
+          {
+            "id": "1",
+            "title": "Makanan Dimsum Sudah ada sejak 1.000 Tahun lalu?! Yuk Kepoin",
+            "description": "Dimsum adalah hidangan tradisional yang berasal dari Tiongkok, khususnya dari wilayah Kanton (Guangdong). Nama 'dimsum' sendiri berasal dari bahasa Kanton yang berarti 'sentuhan hati' atau 'makanan kecil', yang menggambarkan hidangan kecil-kecil yang dimakan sebagai camilan atau hidangan ringan. Dimsum kini sangat populer di seluruh dunia dan menjadi bagian dari budaya Tiongkok yang melambangkan kebersamaan dan perayaan.",
+            "date": "2024-08-11"
+          },
+          {
+            "id": "2",
+            "title": "Menu Ramadhan Berkah Yang Manis dan Cocok Buat Buka Puasa, Apa Aja Ya Makanannya?",
+            "description": "Berbagai pilihan menu manis yang cocok untuk buka puasa di bulan Ramadhan, seperti kolak pisang, es buah, cendol, kue cubir, puding cokelat, dan klepon. Menu-menu ini menyegarkan dan memberikan kenikmatan saat berbuka puasa.",
+            "date": "2024-04-01"
+          }
+        ]
+      }
+    ]
+  }
+  

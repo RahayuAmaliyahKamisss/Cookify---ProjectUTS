@@ -1,72 +1,90 @@
-
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import React from 'react';
 import { Link } from '@react-navigation/native';
 
 const StartScreen = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-        backgroundColor: '#fff', // Tambahkan warna background jika diperlukan
-      }}>
+    <View style={styles.container}>
+      
+      {/* Gambar background memenuhi layar */}
+      <Image 
+        source={require('../Photo/Start.png')} 
+        style={styles.backgroundImage}
+      />
 
-      {/* Gambar ditampilkan dalam View terpisah agar fleksibel */}
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', width: '100%' }}>
-        <Image 
-          source={require('../Photo/T.jpeg')} 
-          style={{ 
-            width: '120%', // Mengisi lebar layar
-            height: '100%', // Mengisi tinggi layar
-            resizeMode: 'contain' // Agar gambar tidak terpotong
-          }}
-        />
-      </View>
-
-      {/* Teks dan Tombol di bagian bawah */}
-      <View style={{
-        position: "absolute",
-        bottom: 50, // Menyesuaikan jarak dari bawah
-        alignItems: 'center', // Menengahkan konten
-        paddingHorizontal: 20, // Menjaga jarak dari tepi layar
-      }}>
-        <Text style={{
-          fontSize: 38,
-          textAlign: "center",
-          fontWeight: '600',
-          color: "#E2CEB1",
-        }}>
-          KOPI UNTUK KETENANGAN
-        </Text>
-
-        <Text style={{
-          fontSize: 19,
-          fontWeight: '400',
-          marginVertical: 10,
-          color: "#E2CEB1",
-          textAlign: 'center'
-        }}>
-          SENTUHAN HANGAT DAN LEMBUT UNTUK KECERIAAN DENGAN KOPI
-        </Text>
-
-        {/* Tombol ke HomeScreen */}
-        <Link style={{
-          backgroundColor: "#c17a2f",
-          textAlign: "center",
-          marginBottom: 35,
-          width: 150,
-          borderRadius: 16,
-          paddingVertical: 10,
-        }} to="/Main">
-          <Text>
-            Go to HomeScreen!
-          </Text>
+      {/* Tombol di bagian bawah */}
+      <View style={styles.buttonContainer}>
+        <Link style={styles.buttonLink} to="/Login">
+          <Text style={styles.buttonText}>SIGN IN</Text>
         </Link>
       </View>
+
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  backgroundImage: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover', // Menjaga gambar memenuhi layar tanpa terpotong
+  },
+  textContainerTop: {
+    position: 'absolute',
+    top: '15%', // Mengatur posisi sedikit ke bawah dari atas layar
+    left: '50%',
+    transform: [{ translateX: -150 }], // Center horizontal
+    alignItems: 'center',
+    width: 300,
+  },
+  titleText: {
+    fontSize: 45,
+    marginTop: -60,
+    fontWeight: 'bold',
+    color: "#388E3C",
+    textAlign: 'center',
+  },
+  textContainerBottom: {
+    position: 'absolute',
+    top: '25%', // Mengatur jarak di bawah teks utama
+    left: '50%',
+    transform: [{ translateX: -150 }],
+    width: 300,
+    alignItems: 'center',
+    fontWeight: 'bold',
+  },
+  descriptionText: {
+    marginTop: -30,
+    fontSize: 19,
+    color: "#FFF",
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  buttonContainer: {
+    position: 'absolute',
+    bottom: 50,
+    left: '50%',
+    transform: [{ translateX: -150 }],
+    width: 300,
+    borderRadius: 40,
+    backgroundColor: "#689F38",
+    paddingVertical: 20,
+    alignItems: 'center',
+  },
+  buttonLink: {
+    width: '100%',
+    textAlign: 'center',
+  },
+  buttonText: {
+    color: '#FFF',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+});
 
 export default StartScreen;
